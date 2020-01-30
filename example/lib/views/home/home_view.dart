@@ -1,6 +1,6 @@
 import 'package:example/views/home/home_view_mobile.dart';
 import 'package:example/views/home/home_view_tablet.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter_web/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 class HomeView extends StatelessWidget {
@@ -8,13 +8,22 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ScreenTypeLayout(
-      breakpoints: ScreenBreakpoints(desktop: 900, tablet: 650, watch: 250),
-      mobile: OrientationLayoutBuilder(
-        portrait: (context) => HomeMobilePortrait(),
-        landscape: (context) => HomeMobileLandscape(),
-      ),
-      tablet: HomeViewTablet(),
+    return ResponsiveBuilder(
+        builder: (context, sizingInformation){
+
+          return Scaffold(
+            appBar: AppBar(title: Text(sizingInformation.toString()),),
+            body: ScreenTypeLayout(      
+              breakpoints: ScreenBreakpoints(desktop: 900, tablet: 650, watch: 250),
+              mobile: OrientationLayoutBuilder(
+                portrait: (context) => HomeMobilePortrait(),
+                landscape: (context) => HomeMobileLandscape(),
+              ),
+              tablet: HomeViewTablet(),
+            ),
+          );
+        },
+
     );
   }
 }

@@ -2,7 +2,7 @@ import 'package:example/widgets/app_drawer/app_drawer.dart';
 /// Contains the widgets that will be used for Mobile layout of home,
 /// portrait and landscape
 
-import 'package:flutter/material.dart';
+import 'package:flutter_web/material.dart';
 
 class HomeMobilePortrait extends StatelessWidget {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();

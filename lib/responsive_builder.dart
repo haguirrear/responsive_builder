@@ -1,7 +1,7 @@
 library responsive_builder;
 
-import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter_web/foundation.dart';
+import 'package:flutter_web/material.dart';
 
 enum DeviceScreenType { Mobile, Tablet, Desktop, Watch }
 

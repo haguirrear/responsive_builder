@@ -1,5 +1,5 @@
 import 'package:example/widgets/app_drawer/app_drawer.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter_web/material.dart';
 
 class HomeViewTablet extends StatelessWidget {
   const HomeViewTablet({Key key}) : super(key: key);
